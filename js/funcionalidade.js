@@ -30,9 +30,13 @@ $('#btn-salvar').click(function(){
     var texto = editor.replace(/<[^>]+>/g, '');
     var blob = new Blob([texto],
     {
+
         type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document;charset=utf-8"
     });
     saveAs(blob, "note.doc");
+        type: "text/plain;charset=utf-8"
+    });
+    saveAs(blob, ".txt");
 }
 });
 
