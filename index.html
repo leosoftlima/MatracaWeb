@@ -10,34 +10,40 @@
     <link rel="stylesheet" href="summernote-bs4.css">
     <link rel="stylesheet" href="css/estilo.css">
 
-    <title>Editor Summer Note</title>
+    <title>Matraca Web</title>
 
   </head>
   <body>
 
+    
+
+    <div class="btn-container">
+            <button name="aumentar-fonte" id="aumentar-fonte" title="Aumentar fonte">A +</button>
+            <button name="diminuir-fonte" id="diminuir-fonte" title="Diminuir fonte">A -</button>
+    </div>
+
     <h1>MATRACA WEB</h1>
-    <!--INÍCIO EDITOR DE TEXTO-->
+
     <div class="matraca">
           <div class="container mt-5 mb-5">
               <textarea id="summernote" class="texto"></textarea>
           </div>
     </div>
-    <!--FIM EDITOR DE TEXTO-->
 
-        <!--INÍCIO SELETOR DE VOZ-->
+         
         <div id="seletor-voz">
           Seletor de voz: <select id='voiceList'></select>
         </div class>
-        <!--FIM SELETOR DE VOZ-->
       
-        <!--INÍCIO BOTÕES DE FUNCIONALIDADE-->
+
       <div class="botoes">
         <input class="btn" type="image" src="imagem/icon-eraser.png" alt="" id="btn-limpar"> <!--Apaga o texto digitado-->
         <input class="btn" type="image" src="imagem/icon-upload.png" alt="" id="btn-abrir"> <!--Abri um arquivo do computador no editor de texto-->
         <input class="btn" type="image" src="imagem/icon-download.jpg" alt="" id="btn-salvar">
         <input class="btn" type="image" src="imagem/icon-voice.png" alt="" id="btn-falar"> <!--Fala o texto digitado no editor-->
       </div>
-       <!--FIM BOTÕES DE FUNCIONALIDADE-->
+
+      
     
       <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
@@ -49,6 +55,21 @@
     <script src="js/funcionalidade.js"></script>
     <script src="js/FileSaver.js"></script>
     <script src="js/speak.js"></script>
+    <script src="js/aumentarDiminuir.js"></script>
+
+
+    <!--Integração do VLibras Widget-->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
 
   
   </body>
