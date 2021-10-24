@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="summernote-bs4.css">
     <link rel="stylesheet" href="css/estilo.css">
+     <script src="https://kit.fontawesome.com/304c41c7f8.js" crossorigin="anonymous"></script>
 
     <title>Matraca Web</title>
-
+  
   </head>
   <body>
-
-    
 
     <div class="btn-container">
             <button name="aumentar-fonte" id="aumentar-fonte" title="Aumentar fonte">A +</button>
@@ -30,21 +29,20 @@
           </div>
     </div>
 
-         
+      
         <div id="seletor-voz">
           Seletor de voz: <select id='voiceList'></select>
         </div class>
       
 
       <div class="botoes">
-        <input class="btn" type="image" src="imagem/icon-eraser.png" alt="" id="btn-limpar"> <!--Apaga o texto digitado-->
-        <input class="btn" type="image" src="imagem/icon-upload.png" alt="" id="btn-abrir"> <!--Abri um arquivo do computador no editor de texto-->
-        <input class="btn" type="image" src="imagem/icon-download.jpg" alt="" id="btn-salvar">
-        <input class="btn" type="image" src="imagem/icon-voice.png" alt="" id="btn-falar"> <!--Fala o texto digitado no editor-->
+        <input class="btn" type="image" src="imagem/icon-eraser.png" id="btn-limpar" alt="Botão para apagar texto"> <!--Apaga o texto digitado-->
+        <input class="btn" type="image" src="imagem/icon-upload.png" id="btn-abrir" alt="Botão para abirr arquivo do computador"> <!--Abri um arquivo do computador no editor de texto-->
+        <input class="btn" type="image" src="imagem/icon-download.png" id="btn-salvar" alt="Botão para salvar arquivo">
+        <input class="btn" type="image" src="imagem/icon-voice.png" id="btn-falar" alt="Botão para ativador o sintetizador de voz"> <!--Fala o texto digitado no editor-->
       </div>
 
-      
-    
+  
       <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -56,8 +54,8 @@
     <script src="js/FileSaver.js"></script>
     <script src="js/speak.js"></script>
     <script src="js/aumentarDiminuir.js"></script>
-
-
+    
+    
     <!--Integração do VLibras Widget-->
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
@@ -69,7 +67,6 @@
     <script>
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    
 
   
   </body>
