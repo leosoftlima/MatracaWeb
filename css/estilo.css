@@ -1,45 +1,108 @@
-body{
-    background-color: rgba(8, 8, 8, 0.856);
+.corpo{
+    background-color: #dee0df;
+    color:#fff5ff;
+}
+.note-editing-area{
+    color: black!important;
+}
+.vetor{
+    position: absolute;
+    top: -100px;
+}
+*{
+    margin:0;
+    padding:0;
 }
 
-h1{
+.menu h1{
     text-align: center;
-    color: yellow;
-    margin-top: 70px;
+    color: #fff5ff;
+    font-weight: 600;
+}
+.sun{
+    color: yellow!important;
+    font-size: 32px!important;
+}
+.moon{
+    color: rgb(25, 25, 184)!important;
+    font-size: 32px!important;
 }
 
-/*INÍCIO Estilo: editor de texto*/
-div.matraca{
-    margin-top: 100px;
+.delete-note{
+    font-size: 30px;
+    color: #8355eb;
+    background-color: #fff5ff;
+    padding: 6px;
+    border-radius: 20px;
 }
 
-#summernote{
-    width: 100%;
+.fa-play{
+    font-size: 35px;
+    color: #8355eb;
+    background-color: #fff5ff;
+    padding: 2px;
+    border-radius: 20px;
 }
 
-.note-toolbar.card-header{
+.note{
+    background-color: #babadc;
+    padding: 5px;
+    margin: 3%;
+    border-radius: 12px;
+    list-style: none;
+    text-overflow:ellipsis;
+    overflow:scroll;
+}
+.notas-voice{
+    background-color: #fffffd;
+    width: 35vw;
+    border: solid #8355eb 6px;
+    border-radius: 15px;
+    min-height: 20vh;
+    color: black;
+    text-align: justify;
+    text-overflow:ellipsis;
+}
+.notas-voice h3{
+    color: black;
     text-align: center;
+    font-size: 25px;
+    font-weight: 400;
 }
-
-.note-editor.note-frame.card{
-    /*margin-left: 145px;*/
-    /*width: 100%;*/
-    max-width: 800px;
-}
-
-div.note-editable.card-block{
-    height: 300px;
-}
-/*FIM Estilo: editor de texto*/
-
-#seletor-voz, #summernote, .container, .mt-5, .mb-5{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #seletor-voz{
-    color: white;
+    margin-top: -50px;
+    margin-left: 23%;
+    width: 724px;
+    overflow:auto;
+    scroll-behavior: unset;
+}
+#summernote{
+    margin:0;
+    width: 723px;
+    margin-left: 15%;
+    border-radius: 30px;
+    height: 40px;
+
+}
+#summernoter{
+    margin:0;
+    width: 723px;
+    margin-left: 23%;
+    margin-top: 2%;
+    border-radius: 30px;
+    height: 40px;
+    resize: none;
+
+}
+.menu{
+    background-color: #8355eb;
+    padding-bottom: 15px;
+    margin: 0!important;
+}
+#btn-falar{
+    border-radius: 50%;
+    width: 155px;
+    height: 135px;
 }
 
 /*INÍCIO Estilo dos botões: limpar, upload, download e falar*/
@@ -50,9 +113,25 @@ div.botoes{
 
 input.btn{
     width: 150px;
-    height: 150px;
+    height: 135px;
     margin: 1.5em;
-    background-color: white;
+    margin-top: 15px!important;
+    margin-bottom: 15px!important;
+    background-color: #8355eb;
     border-radius: 50%;
+
 }
+@media (max-width: 768px) {
+    .container2 {
+        padding: 50px 25px;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+
+}   
+
+
+
 /*FIM Estilo dos botões: limpar, upload, download e falar*/
