@@ -5,7 +5,7 @@ $("p").each(function(){
 });
 
 
-var txtInput = document.querySelector('#summernote');
+var txtInput = document.querySelector('#summernoter');
 var voiceList = document.querySelector('#voiceList');
 var btnSpeak = document.querySelector('#btn-falar');
 var synth = window.speechSynthesis;
@@ -19,6 +19,7 @@ PopulateVoices();
 btnSpeak.addEventListener('click', ()=> {
 var toSpeak = new SpeechSynthesisUtterance(txtInput.value);
 var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+window.alert("Lendo o texto!")
     voices.forEach((voice)=>{
     if(voice.name === selectedVoiceName){
     toSpeak.voice = voice;

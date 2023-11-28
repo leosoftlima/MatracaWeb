@@ -4,39 +4,73 @@
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/5bdc924188.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="summernote-bs4.css">
     <link rel="stylesheet" href="css/estilo.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Editor Summer Note</title>
-
   </head>
-  <body>
-
-    <h1>MATRACA WEB</h1>
+  <body class="corpo" id="mudar">
+<div class="menu">
+    <h1 class="titulo1">MATRACA WEB</h1>
     <!--INÍCIO EDITOR DE TEXTO-->
-    <div class="matraca">
-          <div class="container mt-5 mb-5">
-              <textarea id="summernote" class="texto"></textarea>
-          </div>
+    <div id="summernote">
+         
     </div>
     <!--FIM EDITOR DE TEXTO-->
-
+<br><br>
         <!--INÍCIO SELETOR DE VOZ-->
         <div id="seletor-voz">
           Seletor de voz: <select id='voiceList'></select>
         </div class>
+        </div>
+        <div class="divisao">
+          <span class="material-symbols-outlined sun" onclick="lightMode()">
+            light_mode
+            </span>
+            <span class="material-symbols-outlined moon" onclick="darkMode()">
+              dark_mode
+              </span>
+        </div>
         <!--FIM SELETOR DE VOZ-->
       
         <!--INÍCIO BOTÕES DE FUNCIONALIDADE-->
       <div class="botoes">
-        <input class="btn" type="image" src="imagem/icon-eraser.png" alt="" id="btn-limpar"> <!--Apaga o texto digitado-->
-        <input class="btn" type="image" src="imagem/icon-upload.png" alt="" id="btn-abrir"> <!--Abri um arquivo do computador no editor de texto-->
-        <input class="btn" type="image" src="imagem/icon-download.jpg" alt="" id="btn-salvar">
-        <input class="btn" type="image" src="imagem/icon-voice.png" alt="" id="btn-falar"> <!--Fala o texto digitado no editor-->
+
+        <input class="btn" type="image" src="imagem/imprimir.jpg" alt="" onclick="funcao_pdf()"><!--Imprimi o que vc escreveu-->
+        <input class="btn" type="image" src="imagem/icon-voice.png" alt="" id="start-record-btn"> <!--Detecta o que vc fala-->
+        <input class="btn" type="image" src="imagem/pause.png" alt="" id="pause-record-btn"> <!--Pausa o escutador de bvoz kkkkk-->
+        <input class="btn" type="image" src="imagem/icon-hear.jpg" alt="" id="btn-falar"> <!--Fala o texto digitado no editor-->
+        <input class="btn" type="image" src="imagem/save.png" alt="" id="save-note-btn"> <!--Salva as Notas para ouvir depois-->
+        <input class="btn" type="image" src="imagem/icon-download.jpg" alt="" id="btn-limpar"> <!--Salva as Notas para ouvir depois-->
+      </div>      <p id="recording-instructions">Aqui estão as instruções!</p>
+      <div class="divisao">
+
+      <div class="notas-voice" id="mudar2">
+      <h3>Minhas Notas</h3>
+      <ul id="notes" id="mudar4">
+          <li id="mudar3">
+              <p class="no-notes">você não tem nenhuma nota.</p>
+          </li>
+      </ul>
       </div>
+
+    </div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script
        <!--FIM BOTÕES DE FUNCIONALIDADE-->
     
       <!-- JavaScript (Opcional) -->
@@ -47,9 +81,10 @@
     <script src="js/summernote-bs4.js"></script>
     <script src="js/summernote-pt-BR.js"></script>
     <script src="js/funcionalidade.js"></script>
-    <script src="js/FileSaver.js"></script>
+    <script src="save-pdf.js"></script>
     <script src="js/speak.js"></script>
-
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+   
   </body>
 </html>
